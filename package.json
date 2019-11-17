@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "sss": "./src/bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "files": [
     "dist"
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/Shelga/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Olga",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Shelga/frontend-project-lvl1/issues"
@@ -29,5 +29,8 @@
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
