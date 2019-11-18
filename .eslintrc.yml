@@ -1,5 +1,3 @@
-   ---
-
 plugins:
   # https://github.com/jest-community/eslint-plugin-jest
   - jest
@@ -16,8 +14,11 @@ env:
 parser: babel-eslint
 
 extends:
-  - 'airbnb-base'
-  - 'plugin:jest/recommended'
+  - "airbnb-base"
+  - "plugin:jest/recommended"
 
 rules:
   no-console: 0
+  semi:
+    - 2
+    - always
