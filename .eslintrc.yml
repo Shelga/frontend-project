@@ -19,6 +19,8 @@ extends:
 
 rules:
   no-console: 0
+  import/prefer-default-export: 0
+  no-plusplus: 0
   semi:
     - 2
     - always

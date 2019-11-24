@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import userName from '../index';
+import { startGame } from '../index';
 
-userName();
+startGame();
