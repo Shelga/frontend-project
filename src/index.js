@@ -12,8 +12,6 @@ export const startGame = () => {
   const maxTries = 3;
   let rightAnswers = 0;
 
-  
-
   let answer;
 
   while (rightAnswers < maxTries) {
@@ -21,11 +19,11 @@ export const startGame = () => {
     const number2 = Math.floor(Math.random() * 100);
     const arr = ['+', '-', '*'];
     const arrayRandElement = (a) => {
-    const rand = Math.floor(Math.random() * a.length);
-    return arr[rand];
-  };
+      const rand = Math.floor(Math.random() * a.length);
+      return arr[rand];
+    };
 
-  const randomOpetation = arrayRandElement(arr);
+    const randomOpetation = arrayRandElement(arr);
 
     console.log(`Question: ${number1} ${randomOpetation} ${number2}`);
 
