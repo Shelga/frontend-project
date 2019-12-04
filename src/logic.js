@@ -20,9 +20,9 @@ const playGame = (nameOfAPlayer, generator) => {
   console.log(`Congratulations, ${nameOfAPlayer}!`);
 };
 
-export const startGame = (gameDescription, generator) => {
+export const startGame = (description, generator) => {
   console.log('Welcome to the Brain Games');
-  console.log(gameDescription);
+  console.log(description);
   const nameOfPlayer = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${nameOfPlayer}!\n`);
 
