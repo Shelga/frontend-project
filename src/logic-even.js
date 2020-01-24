@@ -1,6 +1,6 @@
 
 export const brainEven = () => {
-    export const number = Math.floor(Math.random() * 100);
+ const number = Math.floor(Math.random() * 100);
   
     const task = `${number}`;
 
