@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 
 export const brainCalc = () => {
     const number1 = Math.floor(Math.random() * 100);
