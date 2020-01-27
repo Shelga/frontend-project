@@ -1,7 +1,13 @@
 
+import { getRandomNumber } from './randomNumber';
+
+export const description = 'What is the result of the expression?';
+
 export const brainCalc = () => {
-  const number1 = Math.floor(Math.random() * 100);
-  const number2 = Math.floor(Math.random() * 100);
+  const min = 0;
+  const max = 99;
+  const number1 = getRandomNumber(max, min);
+  const number2 = getRandomNumber(max, min);
   const arr = ['+', '-', '*'];
 
   const arrayRandElement = (a) => {

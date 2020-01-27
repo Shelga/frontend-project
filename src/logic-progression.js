@@ -1,3 +1,5 @@
+export const description = 'What number is missing in the progression?';
+
 export const brainProgression = () => {
   const number1 = Math.floor(Math.random() * 100);
   const number2 = Math.floor(Math.random() * 100);

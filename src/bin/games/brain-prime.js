@@ -2,8 +2,6 @@
 
 
 import { startGame } from '../../logic';
-import { brainPrime } from '../../logic-prime';
-
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+import { description, brainPrime } from '../../logic-prime';
 
 startGame(description, brainPrime);

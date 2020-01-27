@@ -1,6 +1,11 @@
+import { getRandomNumber } from './randomNumber';
+
+export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 export const brainEven = () => {
-  const number = Math.floor(Math.random() * 100);
+  const min = 0;
+  const max = 99;
+  const number = getRandomNumber(max, min);
 
   const task = `${number}`;
 

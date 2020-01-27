@@ -2,9 +2,6 @@
 
 
 import { startGame } from '../../logic';
-import { brainProgression } from '../../logic-progression';
-
-
-const description = 'What number is missing in the progression?';
+import { description, brainProgression } from '../../logic-progression';
 
 startGame(description, brainProgression);

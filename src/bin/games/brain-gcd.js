@@ -1,9 +1,6 @@
 #!/usr/bin/games/env node
 
 import { startGame } from '../../logic';
-import { brainGcd } from '../../logic-gcd';
-
-const description = 'Find the greatest common divisor of given numbers.';
-
+import { description, brainGcd } from '../../logic-gcd';
 
 startGame(description, brainGcd);
