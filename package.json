@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-shelga",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "First frontend-project",
   "main": "index.js",
   "bin": {
