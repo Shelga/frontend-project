@@ -5,38 +5,39 @@
 
 [![Build Status](https://travis-ci.org/Shelga/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/Shelga/frontend-project-lvl1)
 
-Brain games
+# Brain games
+
 
 
 Setup
-$ make install
-$ brain-games
+``` $ make install ```
+``` $ brain-games ```
 
-Brain even
+
+## Brain even
 Answer "yes" if the number is even, otherwise answer "no".
 
-$ brain-even
+``` $ brain-even ```
 
 
-Brain calc
-What is the result of the expression?
+## Brain calc
+What is the result of the expression?  
+``` $ brain-calc ```
 
-$ brain-calc
 
-
-Brain gcd
+## Brain gcd
 Find the greatest common divisor of given numbers.
 
-$ brain-gcd
+``` $ brain-gcd ```
 
 
-Brain progression
+## Brain progression
 What number is missing in the progression?
 
-$ brain-progression
+``` $ brain-progression ```
 
 
-Brain prime
+## Brain prime
 Answer "yes" if given number is prime. Otherwise answer "no".
 
-$ brain-prime
+``` $ brain-prime ```
