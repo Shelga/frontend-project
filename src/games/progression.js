@@ -1,9 +1,9 @@
-import { startGame } from '../../logic';
-import { getRandomNumber } from '../../randomNumber';
+import startGame from '../logic';
+import getRandomNumber from '../randomNumber';
 
 export const description = 'What number is missing in the progression?';
 
-export const brainProgression = () => {
+export const createGameProgression = () => {
   const min = 0;
   const max = 15;
   const number1 = getRandomNumber(max, min);
@@ -32,5 +32,5 @@ export const brainProgression = () => {
   return { task, rightAnswer };
 };
 export function startProgression() {
-  startGame(description, brainProgression);
+  startGame(description, createGameProgression);
 }

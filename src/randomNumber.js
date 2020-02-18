@@ -1,2 +1,2 @@
 
-export const getRandomNumber = (max, min) => Math.floor(Math.random() * (max - min)) + min;
+export default (max, min) => Math.floor(Math.random() * (max - min)) + min;

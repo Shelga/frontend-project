@@ -1,5 +1,5 @@
-import { getRandomNumber } from '../../randomNumber';
-import { startGame } from '../../logic';
+import getRandomNumber from '../randomNumber';
+import startGame from '../logic';
 
 export const description = 'Find the greatest common divisor of given numbers.';
 
@@ -10,7 +10,7 @@ const getTheGcd = (num1, num2) => {
   return getTheGcd(num2, num1 % num2);
 };
 
-export const brainGcd = () => {
+export const createGameGcd = () => {
   const min = 0;
   const max = 15;
   const number1 = getRandomNumber(max, min);
@@ -24,5 +24,5 @@ export const brainGcd = () => {
 };
 
 export function startGcd() {
-  startGame(description, brainGcd);
+  startGame(description, createGameGcd);
 }

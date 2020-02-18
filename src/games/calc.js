@@ -1,24 +1,24 @@
 
-import { getRandomNumber } from '../../randomNumber';
-import { startGame } from '../../logic';
+import getRandomNumber from '../randomNumber';
+import startGame from '../logic';
 
 export const description = 'What is the result of the expression?';
 
 const arrOfOperation = ['+', '-', '*'];
 
-export const brainCalc = () => {
+export const createGameCalc = () => {
   const min = 0;
-  const max = 99;
+  const max = 10;
   const number1 = getRandomNumber(max, min);
   const number2 = getRandomNumber(max, min);
 
 
-  const arrayRandElement = (a) => {
+  const randElement = (a) => {
     const rand = getRandomNumber(0, a.length);
     return arrOfOperation[rand];
   };
 
-  const randomOpetation = arrayRandElement(arrOfOperation);
+  const randomOpetation = randElement(arrOfOperation);
 
   const task = `${number1} ${randomOpetation} ${number2}`;
 
@@ -40,5 +40,5 @@ export const brainCalc = () => {
 };
 
 export function startCalc() {
-  startGame(description, brainCalc);
+  startGame(description, createGameCalc);
 }
