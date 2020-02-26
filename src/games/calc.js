@@ -1,10 +1,10 @@
 
 import getRandomNumber from '../randomNumber';
-import startGame from '../logic';
+import playGame from '../logic';
 
 export const description = 'What is the result of the expression?';
 
-const arrOfOperation = ['+', '-', '*'];
+const operations = ['+', '-', '*'];
 
 export const createGameCalc = () => {
   const min = 0;
@@ -13,12 +13,12 @@ export const createGameCalc = () => {
   const number2 = getRandomNumber(max, min);
 
 
-  const randElement = (a) => {
-    const rand = getRandomNumber(0, a.length);
-    return arrOfOperation[rand];
+  const getrandElement = (a) => {
+    const randOperation = getRandomNumber(0, a.length);
+    return operations[randOperation];
   };
 
-  const randomOpetation = randElement(arrOfOperation);
+  const randomOpetation = getrandElement(operations);
 
   const task = `${number1} ${randomOpetation} ${number2}`;
 
@@ -40,5 +40,5 @@ export const createGameCalc = () => {
 };
 
 export function startCalc() {
-  startGame(description, createGameCalc);
+  playGame(description, createGameCalc);
 }

@@ -1,4 +1,4 @@
-import startGame from '../logic';
+import playGame from '../logic';
 import getRandomNumber from '../randomNumber';
 
 export const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -29,5 +29,5 @@ export const createGamePrime = () => {
   return { task, rightAnswer };
 };
 export function startPrime() {
-  startGame(description, createGamePrime);
+  playGame(description, createGamePrime);
 }

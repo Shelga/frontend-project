@@ -10,7 +10,7 @@
 
 
 Setup
-``` $ make install ```
+``` $ make install ```  
 ``` $ brain-games ```
 
 

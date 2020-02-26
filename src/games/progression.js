@@ -1,4 +1,4 @@
-import startGame from '../logic';
+import playGame from '../logic';
 import getRandomNumber from '../randomNumber';
 
 export const description = 'What number is missing in the progression?';
@@ -13,8 +13,8 @@ export const createGameProgression = () => {
 
   const randomIndex = getRandomNumber(lengthOfArray - 1, min);
 
-  let arr = Array.from({ length: lengthOfArray });
-  arr = arr.map((_, i) => {
+  let progressionNumbers = Array.from({ length: lengthOfArray });
+  progressionNumbers = progressionNumbers.map((_, i) => {
     if (i === randomIndex) {
       return '..';
     }
@@ -27,10 +27,10 @@ export const createGameProgression = () => {
 
   const rightAnswer = number1 + number2 * randomIndex;
 
-  const task = `${arr.join(' ')}`;
+  const task = progressionNumbers.join(' ');
 
   return { task, rightAnswer };
 };
 export function startProgression() {
-  startGame(description, createGameProgression);
+  playGame(description, createGameProgression);
 }

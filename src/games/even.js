@@ -1,5 +1,5 @@
 import getRandomNumber from '../randomNumber';
-import startGame from '../logic';
+import playGame from '../logic';
 
 export const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -18,5 +18,5 @@ export const createGameEven = () => {
 };
 
 export function startEven() {
-  startGame(description, createGameEven);
+  playGame(description, createGameEven);
 }
