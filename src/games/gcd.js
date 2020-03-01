@@ -14,8 +14,8 @@ const min = 0;
 const max = 15;
 
 export const createGameGcd = () => {
-  const number1 = getRandomNumber(max, min);
-  const number2 = getRandomNumber(max, min);
+  const number1 = getRandomNumber(min, max);
+  const number2 = getRandomNumber(min, max);
 
   const task = `${number1} ${number2}`;
 
@@ -24,6 +24,6 @@ export const createGameGcd = () => {
   return { task, rightAnswer };
 };
 
-export function startGcd() {
+export default () => {
   playGame(description, createGameGcd);
-}
+};

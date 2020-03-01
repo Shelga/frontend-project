@@ -9,7 +9,7 @@ const max = 15;
 const isEven = (num) => num % 2 === 0;
 
 export const createGameEven = () => {
-  const number = getRandomNumber(max, min);
+  const number = getRandomNumber(min, max);
   const task = number.toString();
 
   const rightAnswer = isEven(number) ? 'yes' : 'no';
@@ -17,6 +17,6 @@ export const createGameEven = () => {
   return { task, rightAnswer };
 };
 
-export function startEven() {
+export default () => {
   playGame(description, createGameEven);
-}
+};

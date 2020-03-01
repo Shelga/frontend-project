@@ -1,36 +1,33 @@
 import playGame from '../logic';
 import getRandomNumber from '../randomNumber';
 
-export const description = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
-export const createGameProgression = () => {
-  const min = 0;
-  const max = 15;
-  const number1 = getRandomNumber(max, min);
-  const number2 = getRandomNumber(max, min);
+const min = 0;
+const max = 15;
 
-  const lengthOfArray = 10;
+const createGameProgression = () => {
+  const firstNumberOfProgression = getRandomNumber(min, max);
+  const stepOfProgression = getRandomNumber(min, max);
 
-  const randomIndex = getRandomNumber(lengthOfArray - 1, min);
+  const lengthOfProgression = 10;
 
-  let progressionNumbers = Array.from({ length: lengthOfArray });
-  progressionNumbers = progressionNumbers.map((_, i) => {
+  const randomIndex = getRandomNumber(lengthOfProgression - 1, 0);
+
+  const progression = Array.from({ length: lengthOfProgression }).map((_, i) => {
     if (i === randomIndex) {
       return '..';
     }
-    if (i > 0) {
-      return number1 + number2 * i;
-    }
 
-    return number1;
+    return firstNumberOfProgression + stepOfProgression * i;
   });
 
-  const rightAnswer = number1 + number2 * randomIndex;
+  const rightAnswer = firstNumberOfProgression + stepOfProgression * randomIndex;
 
-  const task = progressionNumbers.join(' ');
+  const task = progression.join(' ');
 
   return { task, rightAnswer };
 };
-export function startProgression() {
+export default () => {
   playGame(description, createGameProgression);
-}
+};

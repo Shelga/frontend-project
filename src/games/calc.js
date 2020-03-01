@@ -2,15 +2,15 @@
 import getRandomNumber from '../randomNumber';
 import playGame from '../logic';
 
-export const description = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const operations = ['+', '-', '*'];
 
-export const createGameCalc = () => {
+const createGameCalc = () => {
   const min = 0;
   const max = 10;
-  const number1 = getRandomNumber(max, min);
-  const number2 = getRandomNumber(max, min);
+  const number1 = getRandomNumber(min, max);
+  const number2 = getRandomNumber(min, max);
 
 
   const getrandElement = (a) => {
@@ -39,6 +39,6 @@ export const createGameCalc = () => {
   return { task, rightAnswer };
 };
 
-export function startCalc() {
+export default () => {
   playGame(description, createGameCalc);
-}
+};

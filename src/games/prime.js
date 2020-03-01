@@ -8,7 +8,7 @@ const max = 15;
 
 
 const isPrime = (num) => {
-  if (num === 1) {
+  if (num <= 1) {
     return false;
   }
   for (let d = 2; (d * d) <= num; d + 1) {
@@ -19,15 +19,14 @@ const isPrime = (num) => {
   return true;
 };
 
-
 export const createGamePrime = () => {
-  const number = getRandomNumber(max, min);
-  const task = `${number}`;
+  const number = getRandomNumber(min, max);
+  const task = number.toString();
 
   const rightAnswer = isPrime(number) ? 'yes' : 'no';
 
   return { task, rightAnswer };
 };
-export function startPrime() {
+export default () => {
   playGame(description, createGamePrime);
-}
+};
