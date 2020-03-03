@@ -7,7 +7,7 @@ const playGame = (nameOfAPlayer, generator) => {
     const obj = generator();
     console.log(`Question: ${obj.task}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (counter === numberOfAnswers) {
+    if (counter === numberOfAnswers && userAnswer === obj.rightAnswer) {
       console.log(`Congratulations, ${nameOfAPlayer}!`);
       return;
     }
