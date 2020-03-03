@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-const playGame = (nameOfAPlayer, generator) => {
-  const numberOfAnswers = 3;
+const numberOfAnswers = 3;
 
+const playGame = (nameOfAPlayer, generator) => {
   for (let counter = 1; counter <= numberOfAnswers; counter += 1) {
     const obj = generator();
     console.log(`Question: ${obj.task}`);
@@ -12,7 +12,7 @@ const playGame = (nameOfAPlayer, generator) => {
       return;
     }
 
-    if (userAnswer !== `${obj.rightAnswer}`) {
+    if (userAnswer !== obj.rightAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${obj.rightAnswer}'.`);
       console.log(`Let's try again, ${nameOfAPlayer}!`);
       return;

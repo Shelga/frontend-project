@@ -1,38 +1,34 @@
 
 import getRandomNumber from '../randomNumber';
-import playGame from '../logic';
+import playGame from '../engine';
 
 const description = 'What is the result of the expression?';
-
 const operations = ['+', '-', '*'];
 
+const getOperation = (a) => {
+  const randOperation = getRandomNumber(0, a.length - 1);
+  return operations[randOperation];
+};
+
+
+const min = 0;
+const max = 10;
+
 const createGameCalc = () => {
-  const min = 0;
-  const max = 10;
-  const number1 = getRandomNumber(min, max);
-  const number2 = getRandomNumber(min, max);
-
-
-  const getrandElement = (a) => {
-    const randOperation = getRandomNumber(0, a.length);
-    return operations[randOperation];
-  };
-
-  const randomOpetation = getrandElement(operations);
-
-  const task = `${number1} ${randomOpetation} ${number2}`;
-
+  const firstNumber = getRandomNumber(min, max);
+  const secondNumber = getRandomNumber(min, max);
+  const randomOpetation = getOperation(operations);
+  const task = `${firstNumber} ${randomOpetation} ${secondNumber}`;
   let rightAnswer;
-
   switch (randomOpetation) {
     case '+':
-      rightAnswer = number1 + number2;
+      rightAnswer = `${firstNumber + secondNumber}`;
       break;
     case '-':
-      rightAnswer = number1 - number2;
+      rightAnswer = `${firstNumber - secondNumber}`;
       break;
     case '*':
-      rightAnswer = number1 * number2;
+      rightAnswer = `${firstNumber * secondNumber}`;
       break;
     default:
   }
