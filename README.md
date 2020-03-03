@@ -27,7 +27,7 @@ What is the result of the expression?
 ## Brain gcd
 Find the greatest common divisor of given numbers.  
 ``` $ brain-gcd ```  
-<video>https://asciinema.org/a/47oCQRdTDFiKBlCAEqytmnryf</video> 
+<video>https://asciinema.org/a/W110EhIgbiBchusOFpj0iAatK</video> 
 
 
 ## Brain progression
