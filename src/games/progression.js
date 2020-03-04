@@ -10,14 +10,15 @@ const createGameProgression = () => {
   const firstNumber = getRandomNumber(min, max);
   const step = getRandomNumber(min, max);
   const lengthOfProgression = 10;
-  const randomIndex = getRandomNumber(lengthOfProgression - 1, 0);
+  const randomIndex = getRandomNumber(0, lengthOfProgression - 1);
   const progressionWithoutOneElement = Array.from({ length: lengthOfProgression }).map((_, i) => {
     if (i === randomIndex) {
       return '..';
     }
     return firstNumber + step * i;
   });
-  const rightAnswer = `${firstNumber + step * randomIndex}`;
+  const answer = firstNumber + step * randomIndex;
+  const rightAnswer = answer.toString();
   const task = progressionWithoutOneElement.join(' ');
   return { task, rightAnswer };
 };

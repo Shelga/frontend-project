@@ -3,11 +3,11 @@ import playGame from '../engine';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (num1, num2) => {
-  if (num2 === 0) {
-    return num1;
+const getGcd = (number1, number2) => {
+  if (number2 === 0) {
+    return number1;
   }
-  return getGcd(num2, num1 % num2);
+  return getGcd(number2, number1 % number2);
 };
 
 const min = 0;
@@ -17,7 +17,7 @@ const createGameGcd = () => {
   const firstNumber = getRandomNumber(min, max);
   const secondNumber = getRandomNumber(min, max);
   const task = `${firstNumber} ${secondNumber}`;
-  const rightAnswer = `${getGcd(firstNumber, secondNumber)}`;
+  const rightAnswer = (getGcd(firstNumber, secondNumber)).toString();
   return { task, rightAnswer };
 };
 
